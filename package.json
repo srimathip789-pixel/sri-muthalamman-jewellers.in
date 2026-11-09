@@ -1,0 +1,11 @@
+{
+    "name": "sri-muthalamman-jewellers-site",
+    "version": "1.0.0",
+    "scripts": {
+        "test": "playwright test",
+        "backup": "powershell -ExecutionPolicy Bypass -File backup.ps1"
+    },
+    "devDependencies": {
+        "@playwright/test": "^1.58.2"
+    }
+}

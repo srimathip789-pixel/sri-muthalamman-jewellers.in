@@ -1,0 +1,222 @@
+[
+    {
+        "id": 101,
+        "metal": "gold",
+        "category": "necklace",
+        "collection": "veda",
+        "name": "Divine Lakshmi Choker Necklace",
+        "weight": 32,
+        "description": "Traditional temple gold necklace with Goddess Lakshmi focal point flanked by ruby droplets. 22K Hallmarked.",
+        "img": "assets/img/gold-choker-1.jpg"
+    },
+    {
+        "id": 102,
+        "metal": "gold",
+        "category": "necklace",
+        "collection": "mudhra",
+        "name": "Antique Matte Gold Choker",
+        "weight": 28,
+        "description": "Modern silhouette with traditional antique gold necklace texture — perfect for silk sarees.",
+        "img": "assets/img/gold-choker-2.jpg"
+    },
+    {
+        "id": 103,
+        "metal": "gold",
+        "category": "necklace",
+        "collection": "veda",
+        "name": "Ashtalakshmi Temple Gold Haram",
+        "weight": 64,
+        "description": "A gold necklace haram masterpiece featuring eight forms of Lakshmi in 22K antique temple gold.",
+        "img": "assets/img/gold-necklace-3.jpg"
+    },
+    {
+        "id": 104,
+        "metal": "gold",
+        "category": "necklace",
+        "collection": "mudhra",
+        "name": "Peacock Antique Gold Haram",
+        "weight": 52,
+        "description": "Long gold haram necklace with peacock motifs in antique matte finish and kemp stones.",
+        "img": "assets/img/gold-necklace-4.jpg"
+    },
+    {
+        "id": 105,
+        "metal": "gold",
+        "category": "necklace",
+        "collection": "veda",
+        "name": "Sacred Lotus Gold Necklace",
+        "weight": 44,
+        "description": "Full bloom lotus motif gold necklace in 22K. Each gold petal individually hand-engraved.",
+        "img": "assets/img/gold-necklace-5.jpg"
+    },
+    {
+        "id": 106,
+        "metal": "gold",
+        "category": "necklace",
+        "collection": "mudhra",
+        "name": "Kasu Mala Gold Necklace Heritage",
+        "weight": 48,
+        "description": "Classic South Indian antique gold coin necklace with Lakshmi impressions in deep matte finish.",
+        "img": "assets/img/gold-necklace-6.jpg"
+    },
+    {
+        "id": 107,
+        "metal": "gold",
+        "category": "necklace",
+        "collection": "mudhra",
+        "name": "Antique Gold Necklace Designer",
+        "weight": 36,
+        "description": "Handcrafted antique gold necklace with traditional South Indian stone work and pendant.",
+        "img": "assets/img/gold-necklace-7.jpg"
+    },
+    {
+        "id": 108,
+        "metal": "gold",
+        "category": "necklace",
+        "collection": "veda",
+        "name": "Grand Temple Gold Haram Necklace",
+        "weight": 72,
+        "description": "Opulent long gold haram necklace with layered pendants and sacred temple motifs. Bridal-grade.",
+        "img": "assets/img/gold-chain-1.jpg"
+    },
+    {
+        "id": 109,
+        "metal": "gold",
+        "category": "necklace",
+        "collection": "veda",
+        "name": "Royal Bridal Gold Necklace Set",
+        "weight": 95,
+        "description": "Complete bridal gold necklace set with interlocking pendants, rubies, emeralds, and pearl drops.",
+        "img": "assets/img/gold-bridal-set-1.jpg"
+    },
+    {
+        "id": 110,
+        "metal": "gold",
+        "category": "earring",
+        "collection": "veda",
+        "name": "Grand Temple Gold Jhumka Earrings",
+        "weight": 21,
+        "description": "Magnificent temple-style gold jhumka earrings with bell chambers, ruby and emerald stone accents.",
+        "img": "assets/img/gold-earring-1.jpg"
+    },
+    {
+        "id": 111,
+        "metal": "gold",
+        "category": "earring",
+        "collection": "mudhra",
+        "name": "Chandelier Antique Gold Earrings",
+        "weight": 18,
+        "description": "Cascading chandelier gold earrings with layered coins and peacock motifs in antique finish.",
+        "img": "assets/img/gold-earring-2.jpg"
+    },
+    {
+        "id": 112,
+        "metal": "gold",
+        "category": "earring",
+        "collection": "veda",
+        "name": "Lotus Gold Stud Earrings",
+        "weight": 6,
+        "description": "Elegant daily-wear lotus gold stud earrings in 22K gold. Subtle and premium.",
+        "img": "assets/img/gold-earring-3.jpg"
+    },
+    {
+        "id": 113,
+        "metal": "gold",
+        "category": "bangle",
+        "collection": "mudhra",
+        "name": "Antique Gold Bangle Kada",
+        "weight": 45,
+        "description": "Heavyweight sculptural gold bangle kada in antique matte with temple dancer engravings.",
+        "img": "assets/img/gold-bangle-1.jpg"
+    },
+    {
+        "id": 114,
+        "metal": "gold",
+        "category": "bangle",
+        "collection": "veda",
+        "name": "Floral Temple Gold Bangle Set",
+        "weight": 36,
+        "description": "Pair of temple-style gold bangles with floral carvings and royal 22K gold polish.",
+        "img": "assets/img/gold-bangle-2.jpg"
+    },
+    {
+        "id": 115,
+        "metal": "gold",
+        "category": "ring",
+        "collection": "veda",
+        "name": "Temple Flower Gold Ring",
+        "weight": 7,
+        "description": "Floral design gold ring with ruby center in traditional temple gold style. 22K.",
+        "img": "assets/img/gold-ring-1.jpg"
+    },
+    {
+        "id": 116,
+        "metal": "gold",
+        "category": "ring",
+        "collection": "mudhra",
+        "name": "Antique Statement Gold Ring",
+        "weight": 9,
+        "description": "Bold antique-finish gold ring with Lakshmi motif and layered gold beaded ring borders.",
+        "img": "assets/img/gold-ring-2.jpg"
+    },
+    {
+        "id": 117,
+        "metal": "gold",
+        "category": "necklace",
+        "collection": "veda",
+        "name": "Heritage Gold Chain Necklace",
+        "weight": 38,
+        "description": "Handmade rope-style 22K gold chain necklace. A timeless South Indian bridal jewellery piece.",
+        "img": "assets/img/gold-chain-2.jpg"
+    },
+    {
+        "id": 118,
+        "metal": "diamond",
+        "category": "ring",
+        "collection": "era",
+        "name": "Signature Diamond Gold Ring",
+        "weight": 4,
+        "description": "Hand-picked solitaire diamond ring set in 18K gold band. Certified and elegant.",
+        "img": "assets/img/diamond-ring-1.jpg"
+    },
+    {
+        "id": 119,
+        "metal": "gold",
+        "category": "necklace",
+        "collection": "veda",
+        "name": "Bridal Grand Gold Necklace Haram",
+        "weight": 110,
+        "description": "Full grand bridal gold necklace haram with multi-tier pendants and kemp stones. 22K temple gold.",
+        "img": "assets/img/bridal-set-1.jpg"
+    },
+    {
+        "id": 120,
+        "metal": "silver",
+        "category": "equipment",
+        "collection": "contemporary",
+        "name": "Sterling Silver Jewellery Lamp",
+        "weight": 500,
+        "description": "High-purity silver jewellery-grade lamp for auspicious rituals. Antique silver artisan craft.",
+        "img": "assets/img/silver-jewellery-1.jpg"
+    },
+    {
+        "id": 121,
+        "metal": "silver",
+        "category": "equipment",
+        "collection": "contemporary",
+        "name": "Pure Silver Deity Jewellery Statue",
+        "weight": 350,
+        "description": "Finely detailed 999+ pure silver jewellery statue. A sacred heirloom silver artisan piece.",
+        "img": "assets/img/silver-statue-1.jpg"
+    },
+    {
+        "id": 122,
+        "metal": "silver",
+        "category": "equipment",
+        "collection": "contemporary",
+        "name": "Silver Ritual Jewellery Lamp",
+        "weight": 600,
+        "description": "Traditional silver jewellery puja lamp — a sacred antique silver piece for home worship.",
+        "img": "assets/img/silver-lamp-1.jpg"
+    }
+]
