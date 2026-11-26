@@ -4,6 +4,21 @@
  *               Images served from /assets/img/ (local, zero external deps)
  */
 
+/* ─────────────────────────────────────────
+   0. SECURITY HELPERS — escape every value from the JSON DB before it
+      touches innerHTML (prevents stored / DOM XSS if the data is tampered)
+───────────────────────────────────────── */
+const HTML_ESCAPES = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;', '`': '&#96;' };
+function escapeHtml(value) {
+    return String(value ?? '').replace(/[&<>"'`]/g, ch => HTML_ESCAPES[ch]);
+}
+// Only allow local catalogue images (blocks javascript:, data:, external URLs)
+function safeImagePath(path) {
+    const p = String(path ?? '');
+    return /^(\.\/)?assets\/img\/[\w\-./]+\.(jpe?g|png|webp|avif)$/i.test(p) && !p.includes('..') ? p : '';
+}
+const FALLBACK_IMG = 'https://placehold.co/600x800/f9f5ec/D4AF37?text=SMJ';
+
 // App State
 let catalogueItems = [];
 let filteredItems = [];
@@ -71,11 +86,14 @@ function renderCatalogue() {
     const fragment = document.createDocumentFragment();
 
     pageItems.forEach(item => {
-        const weightLabel = item.metal === 'silver'
-            ? `${item.weight}g`
-            : `${item.weight}g (Approx)`;
+        const weight = Number(item.weight) || 0;
+        const metal = escapeHtml(item.metal).toUpperCase();
+        const weightLabel = item.metal === 'silver' ? `${weight}g` : `${weight}g (Approx)`;
+        const name = escapeHtml(item.name);
+        const description = escapeHtml(item.description);
+        const img = safeImagePath(item.img) || FALLBACK_IMG;
 
-        const waMsg = encodeURIComponent(`Hi Sri Muthalamman Jewellers! I'd like to enquire about "${item.name}" from your Digital Catalogue. Please share more details.`);
+        const waMsg = encodeURIComponent(`Hi Sri Muthalamman Jewellers! I'd like to enquire about "${String(item.name ?? '')}" from your Digital Catalogue. Please share more details.`);
         const waLink = `https://wa.me/917010955834?text=${waMsg}`;
 
         const card = document.createElement('article');
@@ -83,29 +101,31 @@ function renderCatalogue() {
         card.innerHTML = `
             <div class="card-inner">
                 <div class="img-container">
-                    <a href="${item.img}" class="glightbox"
-                       data-glightbox="title: ${item.name}; description: ${item.description}">
-                        <img
-                            src="${item.img}"
-                            alt="${item.name}"
-                            loading="lazy"
-                            onerror="this.onerror=null; this.src='https://placehold.co/600x800/f9f5ec/D4AF37?text=${encodeURIComponent(item.name)}'">
+                    <a href="${img}" class="glightbox"
+                       data-title="${name}" data-description="${description}">
+                        <img src="${img}" alt="${name}" loading="lazy">
                         <div class="zoom-overlay"><i class="fas fa-expand"></i></div>
                     </a>
-                    <div class="card-tag">${item.collection.toUpperCase()}</div>
+                    <div class="card-tag">${escapeHtml(item.collection).toUpperCase()}</div>
                 </div>
                 <div class="product-info">
-                    <div class="brand-line">SMJ MADURAI · ${item.metal.toUpperCase()}</div>
-                    <h4>${item.name}</h4>
-                    <p class="description">${item.description}</p>
+                    <div class="brand-line">SMJ MADURAI · ${metal}</div>
+                    <h4>${name}</h4>
+                    <p class="description">${description}</p>
                     <div class="card-footer">
                         <span class="weight"><i class="fas fa-weight-hanging" style="color:#D4AF37;margin-right:6px;"></i>${weightLabel}</span>
-                        <a href="${waLink}" target="_blank" rel="noopener" class="enquire-btn">
+                        <a href="${waLink}" target="_blank" rel="noopener noreferrer" class="enquire-btn">
                             <i class="fab fa-whatsapp"></i> Enquire
                         </a>
                     </div>
                 </div>
             </div>`;
+
+        // Image fallback without an inline onerror="" handler (CSP-friendly)
+        card.querySelector('img').addEventListener('error', e => {
+            if (e.target.src !== FALLBACK_IMG) e.target.src = FALLBACK_IMG;
+        }, { once: true });
+
         fragment.appendChild(card);
     });
 

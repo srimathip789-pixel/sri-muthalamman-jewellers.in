@@ -3,3 +3,12 @@ node_modules
 .netlify
 .env*
 *.log
+
+# Test / build artefacts
+test-results/
+playwright-report/
+backups/
+*.bak
+*.txt
+!robots.txt
+!.well-known/security.txt
